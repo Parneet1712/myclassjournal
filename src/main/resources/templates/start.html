@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>My Class Journal</title>
+</head>
+<header>
+    <h1 style="color:orangered; text-align:center">My Class Journal</h1>
+    <h3 style="color:indianred; text-align: center" th:text="${journalEntry}"></h3>
+</header>
+<body style="background-color: peachpuff">
+
+
+
+<form style="text-align: center" action="#" th:action="@{/saveJournalEntry}" th:object="${journalEntry}" method="GET">  <br/>
+    <label style="color:darkred">Notes:</label><input style="color: cornflowerblue" type="text" name="Notes" th:field="*{notes}"/>  <br/> <br/>
+    <label style="color:darkred">Date:</label><input style="color: cornflowerblue" type="text" name="Date" th:field="*{date}"/>  <br/> <br/>
+    <button style="background-color: lightcoral" name="submit" type="submit" value="0">Submit</button>
+</form>
+</body>
+</html>
